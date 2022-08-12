@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> RANDOM ARRAY </title>
+
+    <style>
+        body {
+            background-color: rgb(252, 255, 95);
+        }
+
+        .container h2 {
+            display: flex;
+            justify-content: center;
+            margin-top: 10%;
+        }
+
+        .container h4 {
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .container button {
+            background-color: rgb(40, 126, 255);
+            height: 40px;
+            width: 80px;
+            color: white;
+            margin-left: 47%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>GET FIRST AND LAST ELEMENT</h2>
+        <div class="row">
+            <button type="submit" onclick="add()">CLICK</button>
+        </div>
+        <h4 id="output"></h4>
+        <h4 id="array"></h4>
+    </div>
+
+    <script>
+        add = () => {
+            const output = document.getElementById("output");
+            const array = document.getElementById("array");
+            const arr = new Array();
+            for (let i = 0; i < 10; i++) {
+                arr.push(Math.floor(Math.random() * 400));
+
+            }
+
+            array.innerText = "Array" + ":" + " " + arr;
+            output.innerText = " First Element Is" + " " + arr[0] + " " + "And Last Element is  " + " " + arr[arr.length - 1];
+        }
+    </script>
+</body>
+
+</html>
